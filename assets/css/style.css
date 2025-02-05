@@ -113,7 +113,6 @@ nav {
 /* Main Content */
 main {
     display: flex;
-    padding: 50px;
     flex-wrap: wrap;
     background: url(trendy-fashionable-couple-posing.jpg) no-repeat center center/cover, #F2F0F1;
     min-height: 100vh; /* Garante que o main ocupe toda a altura da tela */
@@ -122,11 +121,14 @@ main {
 .left-content {
     flex: 1;
     min-width: 300px;
+    margin-top: 120px;
+    margin-left: 220px;
     margin-bottom: 30px;
     color: #333; /* Cor do texto para contrastar com o fundo */
 }
 
 .left-content h1 {
+    font-weight: 890;
     font-size: 3em;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -139,13 +141,18 @@ main {
 }
 
 .left-content button {
-    padding: 10px 20px;
+    padding: 20px 60px;
     border: none;
     border-radius: 25px;
     background-color: black;
     color: white;
     cursor: pointer;
     font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.left-content button:hover{
+    background-color: #333;
 }
 
 .stats {
@@ -168,12 +175,127 @@ main {
     flex: 1;
     text-align: right;
     min-width: 300px;
+    margin-right: 220px;
 }
 
 .right-content img {
-    max-width: 80%; /* Reduz o tamanho da imagem */
+    max-width: 80%; /* Mantém a largura responsiva */
     height: auto;
-    border-radius: 10px; /* Adiciona bordas arredondadas */
+    border-radius: 10px; /* Bordas arredondadas */
+    clip-path: inset(0 0 30% 0); /* Corta 30% da parte inferior */
+}
+
+/* Linha divisória e Logos */
+.divider {
+    width: 100%; /* Ocupa 100% da largura da tela */
+    text-align: center;
+    margin-top: 0px;
+    position: relative;
+    background-color: black; /* Define a cor da linha */
+}
+
+.divider hr {
+    border: none;
+    height: 0px;
+    width: 100%; /* Garante que ocupe toda a largura da viewport */
+    margin: 0; /* Remove margens extras */
+    position: absolute;
+    left: 0;
+}
+
+.brand-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.brand-logos img {
+    background-color: black;
+    max-width: 150px;
+    height: auto;
+    margin: 10px;
+}
+
+/* Section*/
+.section-divider {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 40px 0;
+}
+
+.product-section h2{
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Grid de produtos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Card de produto */
+.product-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.stars {
+    color: gold;
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.view-all {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 100px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-color: #000 ;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.view-all:hover {
+    background-color: #dfdfdf;
 }
 
 /* Media Queries para Responsividade */
@@ -217,8 +339,18 @@ main {
         padding: 20px;
     }
 
+    .left-content {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
     .left-content h1 {
         font-size: 2.5em;
+    }
+    
+    .right-content {
+        /* text-align: center; */
+        margin-right: 0px;
     }
 
     .stats div {
@@ -228,6 +360,19 @@ main {
     .icons {
         display: flex;
         gap: 15px;
+    }
+
+    .brand-logos {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .brand-logos img {
+        max-width: 100px; /* Reduz o tamanho dos logos em telas menores */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -261,5 +406,9 @@ main {
 
     .right-content img {
         max-width: 100%; /* Ajusta a imagem para telas pequenas */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 }
