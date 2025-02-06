@@ -115,15 +115,17 @@ main {
     display: flex;
     flex-wrap: wrap;
     background: url(trendy-fashionable-couple-posing.jpg) no-repeat center center/cover, #F2F0F1;
-    min-height: 100vh; /* Garante que o main ocupe toda a altura da tela */
+    min-height: 0vh; /* Garante que o main ocupe toda a altura da tela */
+    margin-bottom: 50px;
+
 }
 
 .left-content {
     flex: 1;
     min-width: 300px;
     margin-top: 120px;
-    margin-left: 220px;
-    margin-bottom: 30px;
+    margin-left: 320px;
+    margin-bottom: 0; /* Removemos o margin-bottom */
     color: #333; /* Cor do texto para contrastar com o fundo */
 }
 
@@ -176,6 +178,7 @@ main {
     text-align: right;
     min-width: 300px;
     margin-right: 220px;
+    margin-bottom: 0; /* Adicione esta linha */
 }
 
 .right-content img {
@@ -189,18 +192,17 @@ main {
 .divider {
     width: 100%; /* Ocupa 100% da largura da tela */
     text-align: center;
-    margin-top: 0px;
     position: relative;
     background-color: black; /* Define a cor da linha */
+    margin-top: -30px; /* Ajuste negativo para subir o divisor */
 }
 
 .divider hr {
     border: none;
-    height: 0px;
+    height: 1px; /* Espessura da linha */
+    background-color: #ccc; /* Cor da linha */
     width: 100%; /* Garante que ocupe toda a largura da viewport */
     margin: 0; /* Remove margens extras */
-    position: absolute;
-    left: 0;
 }
 
 .brand-logos {
@@ -228,11 +230,12 @@ main {
 }
 
 .product-section h2{
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     color: black;
     font-size: 2em;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 /* Grid de produtos */
@@ -296,6 +299,51 @@ main {
 
 .view-all:hover {
     background-color: #dfdfdf;
+}
+
+/* footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+}
+footer h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+footer a {
+    color: #6c757d;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6c757d;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.footer-links div {
+    margin: 0 20px;
+}
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links ul li {
+    margin-bottom: 5px;
 }
 
 /* Media Queries para Responsividade */
@@ -373,6 +421,10 @@ main {
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .divider {
+        margin-top: -20px; /* Ajuste para telas menores */
     }
 }
 
