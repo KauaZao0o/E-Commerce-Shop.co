@@ -1,12 +1,27 @@
-/* Reset básico */
-* {
+@font-face {
+    font-family: "Integral CF";
+    src: url("../assets/fonts/Integral-CF-Font-Family/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+    /* src: url("./assets/fonts/Integral-CF-Font-Family/Fontspring-DEMO-integralcf-bold.otf") format("opentype"); */
+    font-weight: 800; 
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Satoshi";
+    src: url("../assets/fonts/Satoshi_Complete/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Satoshi regular";
+    src: url("../assets/fonts/Satoshi_Complete/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
 }
 
 /* Pop-up */
@@ -35,17 +50,6 @@ body {
 }
 
 /* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
-    flex-wrap: wrap;
-    position: relative;
-}
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -59,166 +63,162 @@ nav {
     margin: 4px 0;
 }
 
-.logo img {
-    height: 40px;
+.header{
+    padding: 1.3rem;
 }
 
-.menu {
+.close{
+    display: none;
+}
+
+.nav-header{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.menu a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-}
-
-.search-icons {
+.nav-primary-container{
     display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: flex-end;
+    gap: 1rem;
 }
 
-.search {
-    flex-grow: 1;
-    margin: 0 20px;
-    position: relative;
-    min-width: 200px;
+.nav-primary-container h1{
+    font-family: "Integral CF";
+    font-size: 25.2px;
+    margin-top: -0.3rem;
 }
 
-.search input {
-    width: 100%;
-    padding: 8px;
-    padding-left: 30px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-}
-
-.search-icon {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #888;
-}
-
-.icons span {
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-/* Main Content */
-main {
+.nav-secondary-container{
     display: flex;
-    flex-wrap: wrap;
-    background: url(trendy-fashionable-couple-posing.jpg) no-repeat center center/cover, #F2F0F1;
-    min-height: 0vh; /* Garante que o main ocupe toda a altura da tela */
-    margin-bottom: 50px;
-
+    gap: 0.7rem;
 }
 
-.left-content {
-    flex: 1;
-    min-width: 300px;
-    margin-top: 120px;
-    margin-left: 320px;
-    margin-bottom: 0; /* Removemos o margin-bottom */
-    color: #333; /* Cor do texto para contrastar com o fundo */
+/* Main */
+.container{
+    background-color: #F2F0F1;
+    padding: 1rem;
+    margin-bottom: -2rem; 
+    padding-top: 2rem;
 }
 
-.left-content h1 {
-    font-weight: 890;
-    font-size: 3em;
-    margin-bottom: 20px;
-    line-height: 1.2;
+.section-title{
+    color: #000000;
+    font-family: "Integral CF";
+    font-size: 36px;
+    width: 90%;
+    line-height: 34px;
 }
 
-.left-content p {
-    font-size: 1em;
-    margin-bottom: 30px;
-    line-height: 1.5;
+.container-section{
+    display: flex;
+    flex-direction: column;
 }
 
-.left-content button {
-    padding: 20px 60px;
+.container-section p{
+    color: rgba(var (0, 0, 0) 0.6);
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 1rem;
+    font-family: "Satoshi regular";
+}
+.container-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-shop{
+    padding: 16px 54px 16px 54px;
     border: none;
-    border-radius: 25px;
     background-color: black;
     color: white;
     cursor: pointer;
-    font-size: 1em;
     transition: background-color 0.3s;
+    width: 358px;
+    border-radius: 62px;
+    padding: 16px 54px 16px 54px;
+    margin-top: 1rem;
+    font-size: 16px;
+    font-family: "Satoshi";
 }
 
-.left-content button:hover{
+.btn-shop:hover{
     background-color: #333;
 }
 
-.stats {
-    display: flex;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-
-.stats div {
-    margin-right: 50px;
-    margin-bottom: 20px;
-}
-
-.stats h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.right-content {
-    flex: 1;
-    text-align: right;
-    min-width: 300px;
-    margin-right: 220px;
-    margin-bottom: 0; /* Adicione esta linha */
-}
-
-.right-content img {
-    max-width: 80%; /* Mantém a largura responsiva */
-    height: auto;
-    border-radius: 10px; /* Bordas arredondadas */
-    clip-path: inset(0 0 30% 0); /* Corta 30% da parte inferior */
-}
-
-/* Linha divisória e Logos */
-.divider {
-    width: 100%; /* Ocupa 100% da largura da tela */
-    text-align: center;
-    position: relative;
-    background-color: black; /* Define a cor da linha */
-    margin-top: -30px; /* Ajuste negativo para subir o divisor */
-}
-
-.divider hr {
-    border: none;
-    height: 1px; /* Espessura da linha */
-    background-color: #ccc; /* Cor da linha */
-    width: 100%; /* Garante que ocupe toda a largura da viewport */
-    margin: 0; /* Remove margens extras */
-}
-
-.brand-logos {
+.container-statistics{
     display: flex;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
-    padding: 10px 0;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
-.brand-logos img {
-    background-color: black;
-    max-width: 150px;
-    height: auto;
-    margin: 10px;
+.stat-item h2{
+    font-family: "Satoshi";
+    font-size: 24px;
+    color: #000000;
+}
+
+.stat-item p{
+    font-family: "Satoshi regular";
+    font-size: 12px;
+    color: rgba(var(0, 0, 0), 0.6);
+    margin-top: -1.2rem;
+}
+
+.stat-primary{
+    padding-left: 1.7rem;
+}
+
+.stat-secondary{
+    padding-right: 1rem;
+}
+
+/* .stat-third {
+    text-align: center;
+    padding-top: 0.8rem;
+} */
+
+.line{
+    display: none;
+}
+
+hr{
+    opacity: 30%;
+    color: #000000;
+}
+
+.models{
+    margin-left: -1rem;
+    width: min(768px, 100vw);
+}
+
+.section-brands{
+    background-color: #000000;
+    padding: 1rem;
+}
+
+.list-brands{
+    padding-top: 2rem;
+}
+
+.list-brands ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    padding-bottom: 1rem;;
+}
+
+.logo-mobile li{
+    height: 23.25px;
+}
+
+.prada{
+    padding-left: 1.3rem;
+}
+
+.calvin-klein{
+    padding-right: 1rem;
 }
 
 /* Section*/
@@ -308,159 +308,264 @@ footer {
     text-align: center;
     border-top: 1px solid #e9ecef;
 }
+
 footer h2 {
     margin-bottom: 20px;
     font-size: 24px;
 }
+
 footer a {
     color: #6c757d;
     text-decoration: none;
     margin: 0 10px;
 }
+
 footer a:hover {
     text-decoration: underline;
 }
+
 footer p {
     margin-top: 20px;
     font-size: 14px;
     color: #6c757d;
 }
+
 .footer-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
+
 .footer-links div {
     margin: 0 20px;
 }
+
 .footer-links h3 {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
 .footer-links ul {
     list-style: none;
     padding: 0;
 }
+
 .footer-links ul li {
     margin-bottom: 5px;
 }
 
 /* Media Queries para Responsividade */
 
-/* Tablets e Telas Pequenas */
+/* Dispositivos Móveis */
 @media (max-width: 768px) {
+
+    .line{
+        display: block;
+    }
+
     .hamburger {
         display: flex;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu a {
-        margin: 10px 0;
-    }
-
-    .nav-right {
-        margin-left: auto; /* Empurra para a direita */
-    }
-
-    .search-icons {
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 10px;
-    }
-    
-    .search {
-        flex-grow: 1;
-        margin: 0 0px;
-        position: relative;
-        min-width: 0px;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    .left-content {
-        margin-top: 0px;
-        margin-left: 0px;
-    }
-
-    .left-content h1 {
-        font-size: 2.5em;
-    }
-    
-    .right-content {
-        /* text-align: center; */
-        margin-right: 0px;
-    }
-
-    .stats div {
-        margin-right: 30px;
-    }
-
-    .icons {
-        display: flex;
-        gap: 15px;
-    }
-
-    .brand-logos {
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .brand-logos img {
-        max-width: 100px; /* Reduz o tamanho dos logos em telas menores */
     }
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .divider {
-        margin-top: -20px; /* Ajuste para telas menores */
+    .section-title{
+        color: #000000; 
+        font-family: "Integral CF";
+        font-size: 36px;
+        width: 80%;
+        line-height: 34px;
+    }
+
+    .p-title{
+        font-family: "Satoshi regular";
+        color: rgba(var(0, 0, 0), 0.6);
+        font-size: 14px;
+        width: 80%;
+        line-height: 20px;
+        padding-top: 1rem;
+    }
+
+    .container-statistics{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+    }
+    
+    .prada{
+        padding-top: 2px;
+        padding-left: 1px;
+    }    
+}
+
+@media (max-width: 399px) {  
+    .line{
+        display: none;
     }
 }
 
-/* Dispositivos Móveis */
-@media (max-width: 480px) {  
-    .left-content h1 {
-        font-size: 2em;
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .close{
+        display: block;
     }
 
-    .left-content p {
-        font-size: 0.9em;
+    .search-nav, #hamburguer, .models{
+        display: none;
     }
 
-    .left-content button {
-        width: 100%;
-    }
-
-    .stats {
-        flex-direction: column;
+    #closePopup{
+        display: flex;
         align-items: center;
-        text-align: center;
     }
 
-    .stats div {
-        margin-right: 0;
+    .nav-header{
+        display: flex;
+        justify-content: space-around;
+        height: 6vh;
+    }
+    
+    .nav-primary-container{
+        display: flex;
+        align-items: center;
+        font-family: "Satoshi regular";
+        font-size: 16px;
+    }
+   
+    .nav-primary-container h1{
+        font-size: 32px;
+        margin-right: 1.3rem;
     }
 
-    .right-content {
-        text-align: center;
+    .nav-list{
+        display: flex;
+        list-style: none;  
+        gap: 1.7rem; 
     }
 
-    .right-content img {
-        max-width: 100%; /* Ajusta a imagem para telas pequenas */
+    .input-group{
+        display: flex;
+        align-items: center;
+        background-color: #F0F0F0;
+        padding: 12px 16rem 12px 16px;
+        border-radius: 62px;
+        height: 48px;
+        width: 100%;
+        gap: 10px;
     }
 
-    .product-grid {
-        grid-template-columns: 1fr;
+    .input-field{
+    
+        border: none;
+        font-family: "Satoshi regular";
+        font-size: 16px;
+        background-color: transparent;
+        padding-bottom: 0.2rem;
+    }
+
+    .input-field:focus{
+       outline: none;
+    }
+
+    .nav-secondary-container{
+        margin-right: 4rem;
+    }
+
+    .nav-img{
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+        gap: 14px;
+    }
+
+    .container-geral{
+        padding: 5rem;
+    }
+
+    .container{
+        background-image: url(/assets/img/casal-da-moda-na-moda-posando-foto-inteira.png);
+        height: 700px;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-position: bottom;
+    }
+
+    .section-title{
+        font-size: 64px;
+        line-height: 64px;
+        width: 50%;
+    }
+
+    .p-title{
+        font-size: 18px;
+        line-height: 22px;
+        width: 38%;
+    }
+
+    .container-btn{
+        display: flex;
+        justify-content: start;
+        margin-top: 1rem;
+    }
+    
+    .container-section{
+        width: auto;
+    }
+
+    .geral{
+        background-color: red;
+    }
+
+    .btn-shop{
+        width: auto;
+    }
+
+    .container-statistics{
+       display: flex;
+       justify-content: start;
+       gap: 2rem;
+       padding-top: 4rem;
+       width: auto;
+        flex-wrap: wrap;
+    }
+
+    .line{
+        display: flex;
+    }
+
+    .stat-item{
+        padding: 0;
+    }
+
+    .stat-item h2{
+        font-family: "Satoshi";
+        font-size: 40px;
+        color: #000000;
+    }
+
+    .stat-item p{
+        font-family: "Satoshi regular";
+        font-size: 16px;
+        color: rgba(var(0, 0, 0), 0.6);
+        margin-top: -1.2rem;
+    }
+
+    .section-brands{
+        height: 122px;
+        margin-top: 2rem;
+    }
+
+    .logo-mobile{
+        height: 33.35px;
+    }
+    
+    .list-brands ul{
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-around;
     }
 }
