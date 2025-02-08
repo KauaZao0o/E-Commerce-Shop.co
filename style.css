@@ -301,6 +301,67 @@ hr{
     background-color: #dfdfdf;
 }
 
+/* Seção Browse by Dress Style */
+.dress-style-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.dress-style-container {
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dress-style-container h2 {
+    font-family: "Integral CF";
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.dress-style-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.dress-style-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dress-style-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Ajustes específicos para cada imagem */
+.dress-style-card.casual img {
+    width: 80%; /* Diminui o tamanho da imagem Casual */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.dress-style-card.formal img {
+    height: 80%; /* Diminui o tamanho vertical da imagem Formal */
+    width: auto; /* Mantém a proporção */
+    margin-left: 10%; /* Aumenta o tamanho para a esquerda */
+}
+
+.dress-style-card.party img {
+    width: 110%; /* Aumenta o tamanho da imagem Party */
+    margin-left: -10%; /* Aumenta o tamanho para a esquerda */
+}
+
+.dress-style-card.gym img {
+    width: 90%; /* Diminui o tamanho da imagem Gym */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
 /* footer */
 footer {
     background-color: #f8f9fa;
@@ -399,6 +460,23 @@ footer p {
         padding-top: 2px;
         padding-left: 1px;
     }    
+
+    .dress-style-grid {
+        grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+    }
+
+    .dress-style-card.casual img,
+    .dress-style-card.formal img,
+    .dress-style-card.party img,
+    .dress-style-card.gym img {
+        width: 100%; /* Restaura o tamanho original das imagens */
+        margin-left: 0; /* Remove o deslocamento para a esquerda */
+        height: auto; /* Mantém a proporção */
+    }
+
+    .dress-style-card p {
+        font-size: 1em; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    }
 }
 
 @media (max-width: 399px) {  
