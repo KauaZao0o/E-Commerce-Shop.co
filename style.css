@@ -233,6 +233,7 @@ hr{
     padding: 10px;
     text-align: center;
     color: black;
+    font-family: "Integral CF";
     font-size: 2em;
     margin-bottom: 20px;
     font-weight: 800;
@@ -303,21 +304,22 @@ hr{
 
 /* Seção Browse by Dress Style */
 .dress-style-section {
-    padding: 2rem;
+    padding: 5rem;
     text-align: center;
 }
 
 .dress-style-container {
-    background-color: #f9f9f9;
+    background-color: #F0F0F0;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dress-style-container h2 {
     font-family: "Integral CF";
-    font-size: 2em;
-    margin-bottom: 1.5rem;
+    font-size: 2.4em;
+    margin-bottom: 3.5rem;
+    margin-top: 2.5rem;
     color: #000000;
 }
 
@@ -328,38 +330,154 @@ hr{
 }
 
 .dress-style-card {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: center;
+    border-radius: 10px; 
 }
 
-.dress-style-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-
-/* Ajustes específicos para cada imagem */
+/* Ajustes nas imagens */
 .dress-style-card.casual img {
-    width: 80%; /* Diminui o tamanho da imagem Casual */
-    margin: 0 auto; /* Centraliza a imagem */
+    width: 55%;
+    height: 100%;
+    margin-right: 0%;
 }
 
 .dress-style-card.formal img {
-    height: 80%; /* Diminui o tamanho vertical da imagem Formal */
-    width: auto; /* Mantém a proporção */
-    margin-left: 10%; /* Aumenta o tamanho para a esquerda */
+    width: 95%;
+    height: 100%;
+    margin-left: -46%;
 }
 
 .dress-style-card.party img {
-    width: 110%; /* Aumenta o tamanho da imagem Party */
-    margin-left: -10%; /* Aumenta o tamanho para a esquerda */
+    width: 90%;
+    height: auto; 
+    margin-left: 23%;
 }
 
 .dress-style-card.gym img {
-    width: 90%; /* Diminui o tamanho da imagem Gym */
-    margin: 0 auto; /* Centraliza a imagem */
+    width: 60%;
+    height: 88%;
+    margin-right: 10%; 
+}
+
+/* Comentários */
+.happy-customers-section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.happy-customers-section h2 {
+    font-family: "Integral CF";
+    font-size: 2.5em;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.comments-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+
+.comments-container::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+}
+
+.comment {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-width: 300px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex: 1 1 auto;
+    scroll-snap-align: start; /* Alinha os comentários ao rolar */
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.8em;
+    text-align: left;
+    margin-bottom: 0.8rem;
+}
+
+.comment-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.name {
+    font-family: "Satoshi";
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.verified {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #4CAF50;
+    border-radius: 50%;
+    position: relative;
+}
+
+.verified::after {
+    content: '✓';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9em;
+}
+
+.comment-text {
+    font-family: "Satoshi regular";
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95em;
+    text-align: left;
+}
+
+.navigation-arrows {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.arrow-left, .arrow-right {
+    cursor: pointer;
+    font-size: 1.8em;
+    color: #333;
+    transition: all 0.3s;
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background: #f5f5f5;
+    transform: scale(1.05);
 }
 
 /* footer */
@@ -461,6 +579,10 @@ footer p {
         padding-left: 1px;
     }    
 
+    .dress-style-container {
+        padding: 1rem;
+    }
+
     .dress-style-grid {
         grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
     }
@@ -473,9 +595,112 @@ footer p {
         margin-left: 0; /* Remove o deslocamento para a esquerda */
         height: auto; /* Mantém a proporção */
     }
+    
+    .happy-customers-section h2 {
+        font-size: 2em;
+    }
 
-    .dress-style-card p {
-        font-size: 1em; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    .comment {
+        min-width: 250px;
+    }
+
+    .stars {
+        font-size: 1.5em;
+    }
+
+    .comment-text {
+        font-size: 0.9em;
+    }
+
+    .navigation-arrows {
+        top: 10px;
+    }
+    
+    .happy-customers-section h2 {
+        font-size: 2em;
+    }
+
+    .comment {
+        min-width: 250px;
+    }
+
+    .stars {
+        font-size: 1.5em;
+    }
+
+    .comment-text {
+        font-size: 0.9em;
+    }
+
+    .navigation-arrows {
+        top: 10px;
+    }
+
+    /* Esconde todos os comentários, exceto o de Sarah M. */
+    .other-comment {
+        display: none;
+    }
+
+    .sarah-comment {
+        display: block;
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .happy-customers-section h2 {
+        font-size: 1.8em;
+    }
+
+    .comment {
+        min-width: 200px;
+        padding: 1rem;
+    }
+
+    .stars {
+        font-size: 1.3em;
+    }
+
+    .comment-text {
+        font-size: 0.85em;
+    }
+
+    .navigation-arrows {
+        top: 5px;
+    }
+
+    .arrow-left, .arrow-right {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5em;
+    }
+
+    .happy-customers-section h2 {
+        font-size: 1.8em;
+    }
+
+    .comment {
+        min-width: 200px;
+        padding: 1rem;
+    }
+
+    .stars {
+        font-size: 1.3em;
+    }
+
+    .comment-text {
+        font-size: 0.85em;
+    }
+
+    .navigation-arrows {
+        top: 5px;
+    }
+
+    .arrow-left, .arrow-right {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5em;
     }
 }
 
