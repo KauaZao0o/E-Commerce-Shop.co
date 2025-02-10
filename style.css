@@ -1,7 +1,6 @@
 @font-face {
     font-family: "Integral CF";
     src: url("assets/fonts/Integral-CF-Font-Family/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
-    /* src: url("./assets/fonts/Integral-CF-Font-Family/Fontspring-DEMO-integralcf-bold.otf") format("opentype"); */
     font-weight: 800; 
     font-style: normal;
   }
@@ -790,7 +789,7 @@ footer p {
     }
 
     .container{
-        background-image: url(/assets/img/casal-da-moda-na-moda-posando-foto-inteira.png);
+        background-image: url(assets/img/casal-da-moda-na-moda-posando-foto-inteira.png);
         height: 700px;
         background-repeat: no-repeat;
         background-position: right;
