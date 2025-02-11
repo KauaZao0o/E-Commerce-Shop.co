@@ -364,14 +364,6 @@ hr{
     margin: 0 auto;
 }
 
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
 .happy-customers-section h2 {
     font-family: "Integral CF";
     font-size: 2.5em;
@@ -379,6 +371,15 @@ hr{
     text-align: left;
     margin: 0;
     line-height: 1.1;
+    margin-top: 20px; /* Ajuste o valor conforme necessário */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
 .comments-container {
@@ -600,7 +601,16 @@ footer p {
     }
     
     .happy-customers-section h2 {
-        font-size: 2em;
+        font-size: 3em; /* Ajuste o tamanho da fonte se necessário */
+        line-height: 1.2; /* Ajuste a altura da linha para melhor espaçamento */
+    }
+
+    .happy-customers-section h2 span {
+        display: block; /* Faz com que cada span ocupe uma linha */
+    }
+
+    .happy-customers-section h2 span:first-child {
+        margin-bottom: 10px; /* Adiciona espaçamento entre "OUR HAPPY" e "CUSTOMERS" */
     }
 
     .comment {
@@ -619,26 +629,6 @@ footer p {
         top: 10px;
     }
     
-    .happy-customers-section h2 {
-        font-size: 2em;
-    }
-
-    .comment {
-        min-width: 250px;
-    }
-
-    .stars {
-        font-size: 1.5em;
-    }
-
-    .comment-text {
-        font-size: 0.9em;
-    }
-
-    .navigation-arrows {
-        top: 10px;
-    }
-
     /* Esconde todos os comentários, exceto o de Sarah M. */
     .other-comment {
         display: none;
@@ -653,34 +643,7 @@ footer p {
 
 @media (max-width: 480px) {
     .happy-customers-section h2 {
-        font-size: 1.8em;
-    }
-
-    .comment {
-        min-width: 200px;
-        padding: 1rem;
-    }
-
-    .stars {
-        font-size: 1.3em;
-    }
-
-    .comment-text {
-        font-size: 0.85em;
-    }
-
-    .navigation-arrows {
-        top: 5px;
-    }
-
-    .arrow-left, .arrow-right {
-        width: 35px;
-        height: 35px;
-        font-size: 1.5em;
-    }
-
-    .happy-customers-section h2 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .comment {
