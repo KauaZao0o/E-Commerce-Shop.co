@@ -266,19 +266,23 @@ hr{
     margin: 10px 0;
 }
 
-.stars {
+.product-card .stars {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
     color: gold;
     font-size: 1.2em;
     margin: 5px 0;
 }
 
-.price {
+.product-card .price {
     font-size: 1.2em;
     color: #333;
     font-weight: bold;
+    margin-top: 10px;
 }
 
-.old-price {
+.product-card .old-price {
     text-decoration: line-through;
     color: #999;
     margin-right: 10px;
@@ -362,6 +366,7 @@ hr{
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 5%;
 }
 
 .happy-customers-section h2 {
@@ -491,6 +496,7 @@ hr{
     max-width: 1200px; /* Largura máxima */
     margin: 0 auto;
     margin-bottom: 5%;
+    margin-top: -9%;
 }
 
 .newsletter-content {
@@ -587,9 +593,11 @@ footer {
 }
 
 .footer-left p {
-    font-size: 16px;
-    color: #000;
-    margin-bottom: 20px;
+    font-family: "Satoshi regular";
+    color: #00000099;
+    line-height: 1.6;
+    font-size: 0.95em;
+    text-align: left;
 }
 
 .social-icons img {
@@ -622,8 +630,14 @@ footer {
     padding: 0;
 }
 
-.footer-links ul li {
-    margin-bottom: 5px;
+.footer-links ul li a {
+    color: #00000099; /* Define a cor dos links com opacidade */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a cor */
+}
+
+.footer-links ul li a:hover {
+    color: #000000; /* Define a cor dos links ao passar o mouse (opcional) */
 }
 
 hr {
@@ -768,17 +782,90 @@ hr {
         width: 80%; /* Ajusta a largura do botão */
     }
 
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha tudo à esquerda */
+    }
+
+    .footer-left {
+        max-width: 100%;
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    .footer-left h1 {
+        font-size: 24px;
+    }
+
+    .footer-left p {
+        font-size: 14px;
+    }
+
+    .social-icons img {
+        width: 50%; /* Reduz a largura da imagem para 50% do seu tamanho original */
+        height: auto; /* Mantém a proporção da imagem */
+        margin-top: 10px;
+    }
+
+    .footer-right {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
     .footer-links {
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Distribui os elementos horizontalmente */
+    }
+
+    .footer-links div {
+        width: 48%; /* Define a largura para cada coluna */
+        margin: 10px 0;
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    .footer-links h3 {
+        font-size: 16px;
+    }
+
+    .footer-links ul {
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 5px;
     }
 
     .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha o texto à esquerda */
     }
-    
+
+    .footer-bottom p {
+        font-size: 12px;
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    .payment-cards img {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Ajustes específicos para a organização dos links */
+    .footer-links div:nth-child(1) { /* Company */
+        order: 1;
+    }
+
+    .footer-links div:nth-child(2) { /* Help */
+        order: 2;
+    }
+
+    .footer-links div:nth-child(3) { /* FAQ */
+        order: 3;
+    }
+
+    .footer-links div:nth-child(4) { /* Resources */
+        order: 4;
+    }    
 }
 
 @media (max-width: 480px) {
