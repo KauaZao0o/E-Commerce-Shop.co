@@ -1,18 +1,18 @@
 @font-face {
     font-family: "Integral CF";
-    src: url("assets/fonts/Integral-CF-Font-Family/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+    src: url("../fonts/Integral-CF-Font-Family/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
     font-weight: 800; 
     font-style: normal;
   }
   @font-face {
     font-family: "Satoshi";
-    src: url("assets/fonts/Satoshi_Complete/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf") format("opentype");
+    src: url("../fonts/Satoshi_Complete/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
   }
   @font-face {
     font-family: "Satoshi regular";
-    src: url("assets/fonts/Satoshi_Complete/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf") format("opentype");
+    src: url("../fonts/Satoshi_Complete/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
   }
@@ -171,11 +171,6 @@
 .stat-secondary{
     padding-right: 1rem;
 }
-
-/* .stat-third {
-    text-align: center;
-    padding-top: 0.8rem;
-} */
 
 .line{
     display: none;
@@ -396,7 +391,7 @@ hr{
 }
 
 .comments-container::-webkit-scrollbar {
-    display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+    display: none; /* Esconde a barra de rolagem no Chrome */
 }
 
 .comment {
@@ -995,7 +990,7 @@ hr {
     }
 
     .container{
-        background-image: url(assets/img/casal-da-moda-posando-foto-inteira.png);
+        background-image: url(../img/casal-da-moda-posando-foto-inteira.png);
         height: 700px;
         background-repeat: no-repeat;
         background-position: right;
@@ -1078,13 +1073,13 @@ hr {
     }
 
     .newsletter-content {
-        flex-direction: row; /* Layout em linha para desktops */
-        justify-content: space-between; /* Espaço entre o texto e o formulário */
-        align-items: center; /* Alinha verticalmente */
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
     }
 
     .newsletter-section h2 {
-        font-size: 1.8em; /* Tamanho da fonte para desktops */
+        font-size: 1.8em; 
         text-align: left; /* Alinha o texto à esquerda */
         flex: 1; /* Ocupa o espaço disponível à esquerda */
     }
